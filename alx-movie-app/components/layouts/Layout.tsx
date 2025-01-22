@@ -1,9 +1,9 @@
 import React from "react";
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC = () => {
     return (
         <div className="layout">
-            {children}
+            <p>Layout</p>
         </div>
     );
 };
