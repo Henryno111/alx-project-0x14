@@ -1,7 +1,7 @@
 # API Explorer: Mastering RESTful Connections
 
 ## Overview
-Welcome to **API Explorer: Mastering RESTful Connections**, a comprehensive guide and toolkit for developers looking to deepen their understanding of RESTful APIs. This resource is designed to help you explore, implement, and optimize API connections in your projects.
+Welcome to **ALX-Movie-APP: Mastering RESTful Connections**, a comprehensive guide and toolkit for developers looking to deepen their understanding of RESTful APIs. This resource is designed to help you explore, implement, and optimize API connections in your projects.
 
 ---
 
