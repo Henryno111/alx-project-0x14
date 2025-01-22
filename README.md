@@ -46,48 +46,65 @@ Before using this toolkit, ensure you have the following:
 
 ---
 
-## Usage
+## API Overview
+The MoviesDatabase API provides a rich set of features for accessing movie data. It allows developers to retrieve detailed information about movies, actors, and genres, as well as perform searches and access ratings.
 
-### Sending Requests
-1. Select an API endpoint from the provided examples.
-2. Customize request parameters as needed.
-3. Click "Send Request" to view the response in real-time.
+## Version
+Current API Version: v1.0
 
-### Adding New Endpoints
-1. Open the configuration file:
-   ```bash
-   config/endpoints.json
-   ```
-2. Add your endpoint details using the template below:
-   ```json
-   {
-     "name": "Example Endpoint",
-     "method": "GET",
-     "url": "https://api.example.com/resource",
-     "headers": {},
-     "body": {}
-   }
-   ```
-3. Save the file and restart the application.
+## Available Endpoints
+- **GET /movies**: Retrieve a list of movies.
+- **GET /movies/{id}**: Get detailed information about a specific movie.
+- **GET /actors**: Retrieve a list of actors.
+- **GET /actors/{id}**: Get detailed information about a specific actor.
+- **GET /genres**: List all available genres.
 
----
+## Request and Response Format
+### Example Request
+```http
+GET /movies HTTP/1.1
+Host: api.moviesdatabase.com
+Authorization: Bearer YOUR_API_KEY
+```
 
-## Contributing
-We welcome contributions to **API Explorer**! To contribute:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Add your feature description here"
-   ```
-4. Push your branch:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. Open a pull request and describe your changes.
+### Example Response
+```json
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Inception",
+      "release_year": 2010,
+      "genre": "Sci-Fi"
+    },
+    {
+      "id": "2",
+      "title": "The Matrix",
+      "release_year": 1999,
+      "genre": "Action"
+    }
+  ]
+}
+```
+
+## Authentication
+To authenticate your requests, you must include an API key in the headers:
+- Header: `Authorization`
+- Format: `Bearer YOUR_API_KEY`
+
+## Error Handling
+Common error responses include:
+- **401 Unauthorized**: Invalid or missing API key.
+- **404 Not Found**: The requested resource does not exist.
+- **500 Internal Server Error**: An error occurred on the server side.
+
+To handle errors, check the HTTP status code and log the response message for debugging.
+
+## Usage Limits and Best Practices
+- **Rate Limits**: The API allows up to 100 requests per minute. Exceeding this limit will result in a 429 Too Many Requests error.
+- **Caching**: Cache frequent requests to reduce the number of API calls.
+- **Pagination**: Use pagination for endpoints returning large datasets to optimize performance.
+- **Error Handling**: Implement robust error handling to manage and retry failed requests.
 
 ---
 
@@ -102,10 +119,3 @@ We welcome contributions to **API Explorer**! To contribute:
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
-
-## Contact
-For questions or feedback, reach out to us:
-- Email: H.agukwe@yahoo.com
-- GitHub: [https://github.com/henryno111/alx-project-0x14]
-
-
