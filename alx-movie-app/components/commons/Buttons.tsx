@@ -4,6 +4,6 @@ const Button: React.FC = () => {
     return (
         <button className="button">Click me</button>
     );
-}
+};
 
 export default Button;
