@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const MovieCard: React.FC = () => {
-    return (
-        <div className="movie-card">
-            <p>Movie Card</p>
-        </div>
-    );
-};
+const Loading = () => {
+  return (
+    <div>Loading</div>
+  )
+}
 
-export default MovieCard;
+export default Loading

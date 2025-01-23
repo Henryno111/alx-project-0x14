@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const Button: React.FC = () => {
-    return (
-        <button className="button">Click me</button>
-    );
-};
+const Buttons = () => {
+  return (
+    <div>Buttons</div>
+  )
+}
 
-export default Button;
+export default Buttons
